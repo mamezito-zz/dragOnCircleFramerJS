@@ -16,5 +16,7 @@ angle=dragOnCircle.circleDrag layer, 100
 ```
 
 ![dragging along circle](https://github.com/mamezito/dragOnCircleFramerJS/blob/master/knob.gif)
+
+
 live sample
 http://tr.im/FramerKnob 
