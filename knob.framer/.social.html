@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<script type="text/javascript">
+		// This automatically sets the right viewport scale on mobile devices
+		(function() {
+ 		var scale = 1 / window.devicePixelRatio
+ 		var viewport = "width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no"
+ 		var iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+ 		if (iOS) { viewport += ", shrink-to-fit=no" }
+ 		document.write("<meta name=\"viewport\" content=\"" + viewport + "\">")
+		})()
+		</script>
+
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png">
+		<link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
+		<link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
+
+		<link rel="stylesheet" type="text/css" href="framer/style.css?nocache=7bece91ecf32b538794fe8f73c6ecee1">
+
+		<script src="framer/coffee-script.js"></script>
+		<script src="framer/framer.js?nocache=f36d292c619f00a0e91a8384c30338b6"></script>
+		<script src="framer/framer.generated.js?nocache=010c1f7e035327d8a4b65a96f184ce3f"></script>
+		<script src="framer/framer.modules.js?nocache=1f6700e28b1592b5f560ce324c7ae8ad"></script>
+		<script>Framer.Device.hideBezel = false</script><script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 5;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};(function() {
+  var InputModule, Knob, angle, dragOnCircle, sketch;
+
+  InputModule = require("input-framer/input");
+
+  sketch = Framer.Importer.load("imported/thermo@3x");
+
+  dragOnCircle = require("dragOnCircle");
+
+  Knob = window.__framerNew("Knob", "10:11-19:9", "#179651b5f",new Layer({
+    width: 110,
+    height: 110,
+    y: 626,
+    backgroundColor: "#fff",
+    borderRadius: 110,
+    shadowBlur: 10,
+    shadowSpread: 5,
+    shadowColor: "rgba(0,0,0,0.2)",
+    html: "18"
+  }));
+
+  Knob.centerX();
+
+  Knob.style = {
+    "line-height": "110px",
+    "width": "110px",
+    "text-align": "center",
+    "font-size": "39px",
+    "color": "#ADAAAA",
+    "font-family": "Roboto"
+  };
+
+  angle = dragOnCircle.circleDrag(Knob, 280);
+
+  Knob.on("change:x", function() {
+    if (dragOnCircle.dragAngle > 180) {
+      return Knob.html = Math.floor(Utils.modulate(dragOnCircle.dragAngle, [180, 360], [0, 18], true));
+    } else {
+      return Knob.html = Math.floor(Utils.modulate(dragOnCircle.dragAngle, [0, 180], [18, 36], true));
+    }
+  });
+
+}).call(this);
+})</script>
+
+	</head>
+	<body>
+	</body>
+</html>

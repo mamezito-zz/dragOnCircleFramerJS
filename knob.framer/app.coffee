@@ -1,3 +1,4 @@
+InputModule = require "input-framer/input"
 #author Sergiy Voronov
 # twitter.com/mamezito
 

@@ -1,0 +1,11 @@
+{
+    "name": "Drag on circle",
+    "description": "Module that allows you dragging on cirle and getting angle of dragging, can be used in volume or thermostat like controls",
+    "author": "Sergiy Voronov",
+
+    "require": "dragOnCircle = require 'dragOnCircle'",
+    "install": "dragOnCircle.coffee",
+    "example": "example.coffee",
+
+    "thumb": "knob.gif"
+}
